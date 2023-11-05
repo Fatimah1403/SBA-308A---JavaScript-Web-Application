@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 :root {
-    --whiteColor: #ffffff;
     --primaryColor: #4032a8;
-    --silverColor: #C0C0C0;
+    --secondaryColor: #a89632;
+    --whiteColor: #ffffff;
+    --tintBlueColor: #33adff;
+    --blackColor: #222222;
+    --softBlueColor: #3296a8;
     --darkBlueColor: #2550BE;
+    --silverColor: #C0C0C0;
+    --greyColor: #f5f5f5;
+    --yellowColor:#e6b800;
 }
 
 *{
@@ -15,7 +21,7 @@
 body {
     width: 100%;
     height: 100vh;
-    background-image: url("/images/hotel_background.jpg");
+    background-image: url("/images/food2.jpg");
     background-size: cover;
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
@@ -23,7 +29,7 @@ body {
 
 header {
     /* background-color: var(--primaryColor); */
-    color: var(--whiteColor);
+    color: var(--blackColor);
     text-align: center;
     margin-top: 50px;
 }
@@ -38,7 +44,7 @@ h1 {
     margin-top: 1.5rem;
 }
 
-#countryInput {
+#recipeInput {
     padding: 0.5rem;
     border: none;
     border-radius: 5px;
@@ -46,7 +52,7 @@ h1 {
     width: 200px;
 }
 
-#countryDropdown {
+#recipeDropdown {
     padding: 0.5rem;
     border-radius: 5px;
     width: 200px;
@@ -114,4 +120,80 @@ h2 {
 
 .hidden {
     display: none;
+}
+.main {
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;
+    padding: 2%;
+    background-color: transparent;
+    margin-left: 250px;
+}
+.main-highlight {
+    margin: 3% 0;
+    padding: 2%;
+    background-color: var(--yellowColor);
+    border-radius: 15px;
+}
+.main-detail {
+    margin: 1rem 0 1.5rem 0;
+}
+.detail-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    width: 100%;
+    margin-top: 1rem;
+    gap: 2%;
+    border-radius: 8px;
+}
+.detail-card {
+    min-height: 280px;
+    height: 100%;
+    background-color: var(--silverColor);
+    border-radius: 10px;
+    margin: 1% 0;
+    box-shadow: rgba(121, 67, 95, 0.8);
+    cursor: pointer;
+}
+.detail-img {
+    width: 100%;
+    height: 180px;
+    border-radius: 8px;
+    object-fit:cover;
+    object-position: center;
+    filter:brightness(0.8);
+}
+.detail-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 3%;
+    width: 100%;
+ }
+ .detail-sub {
+    font-size: 12px;
+    color: var(--tintBlueColor);
+    letter-spacing: 0.5;
+    margin: 1% 0;
+}
+.price {
+    color: var(--darkBlueColor);
+}
+.detail-fav {
+    font-size: 24px;
+}
+
+.detail-card:hover {
+    background-color: var(--whiteColor);
+}
+
+.detail-card:hover .detail-img {
+   filter: opacity(1); 
+}
+.detail-card:hover .detail-name {
+    color: var(--darkBlueColor);
+}
+
+.detail-card:hover .price {
+    letter-spacing:1.5px;
 }
