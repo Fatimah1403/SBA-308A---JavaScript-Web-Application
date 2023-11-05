@@ -1,3 +1,4 @@
+const countryDropdown = document.getElementById("countryDropdown");
 const url = 'https://hotels4.p.rapidapi.com/v2/get-meta-data';
 const options = {
 	method: 'GET',
@@ -9,7 +10,17 @@ const options = {
 
 try {
 	const response = await fetch(url, options);
-	let result = await response.json();
+    if (response.ok) {
+        let result = await response.json();
+        for (let countryCode in result) {
+            const option = document.createElement("option");
+            option.value = countryCode;
+            option.textContent = countryCode;
+            countryDropdown.appendChild(option);
+        }
+    } else {
+        console.error("Failed to fetch the data.")
+    }
 	console.log(result);
 } catch (error) {
 	console.error(error);

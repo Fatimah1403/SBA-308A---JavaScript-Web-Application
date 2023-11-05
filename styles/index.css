@@ -46,6 +46,22 @@ h1 {
     width: 200px;
 }
 
+#countryDropdown {
+    padding: 0.5rem;
+    border-radius: 5px;
+    width: 200px;
+    margin-right: 0.5rem;
+    font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+}
+#countryDropdown option {
+    font-family: "Poppins", sans-serif;
+    background-color: #fff;
+    color: var(--darkBlueColor);
+}
+
+
 #searchButton {
     background-color: var(--darkBlueColor);
     color: var(--whiteColor);
