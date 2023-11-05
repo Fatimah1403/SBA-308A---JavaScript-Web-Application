@@ -29,14 +29,12 @@ async function fetchData() {
     }
 }
 fetchData();
-function populateRecipeDropdown(recipes) {
+function populateFeedInfo(feeds) {
+    const detailName = document.querySelector('.detail-name, .detail-card');
 
-    recipes.forEach((recipe) => {
-        const option = document.createElement('option');
-        option.value = recipe[0].content;
-        option.textContent = recipe.name;
-        recipeDropdown.appendChild(option);
-    });
+   detailName.innerHTML = `
+    <h4>${feeds}</h4>
+   `
 }
 // Export a default function to fetch and manipulate data
 export default async function manipulateYummlyData() {

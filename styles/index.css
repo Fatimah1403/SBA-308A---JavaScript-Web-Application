@@ -127,12 +127,12 @@ h2 {
     min-height: 100vh;
     padding: 2%;
     background-color: transparent;
-    margin-left: 250px;
+    /* margin-left: 250px; */
 }
 .main-highlight {
     margin: 3% auto;
-    padding: 2%;
-    background-color: var(--yellowColor);
+    /* padding: 2%; */
+    /* background-color: var(--yellowColor); */
     border-radius: 15px;
     text-align: center;
 }
