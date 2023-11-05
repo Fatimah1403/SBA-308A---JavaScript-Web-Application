@@ -33,15 +33,16 @@ function populateFeedInfo(feeds) {
     const detailName = document.querySelector('.detail-name, .detail-card');
 
    detailName.innerHTML = `
-    <h4>${feeds}</h4>
+    <h4>${feeds[0].content}</h4>
+    <p>${feeds[0].details}</P>
    `
+   // want to add others but not getting d object due to the subscription problem
 }
-// Export a default function to fetch and manipulate data
+
 export default async function manipulateYummlyData() {
-    const yummlyData = await fetchData();
-    if (yummlyData) {
-        // You can manipulate the yummlyData here as needed
-        // For example, you can filter, transform, or display the data
-        console.log(yummlyData);
+    const feedData = await fetchData();
+    if (feedData) {
+        // want to manipulate this function.
+        console.log(feedData);
     }
 }
