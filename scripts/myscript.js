@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     
-    fetchRawMealData()
+    fetchRawMealData();
 });
 async function fetchSelectedMealData(searchQuery) {
     const result = document.getElementById('wrapper');
