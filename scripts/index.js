@@ -48,7 +48,9 @@
 // }
 function getRandomLetter() {
     const alphabet = 'abcdefghijklmnopqrstuvwxyz';
-    const randomIndex = Math.floor(Math.random() * alphabet.length);
+    const minIndex = 0;
+    const maxIndex = alphabet.length - 1
+    const randomIndex = minIndex + Math.floor(Math.random() * (maxIndex - minIndex + 1));
     return alphabet[randomIndex];
 }
 async function fetchRawMealData() {
