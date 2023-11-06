@@ -3,38 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Recipe</title>
-    <link rel="stylesheet" href="styles/recipe.css">
+    <title>Food recipe</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <h1>Food Recipes</h1>
+        <h1 class="recipee-name"></h1>
     </header>
-    <main>
-        <section id="search-bar">
-            <input type="text" id="recipe-search" placeholder="Search for recipes...">
-            <button id="search-button">Search</button>
-            
-            <label for="filter">Filter by Category:</label>
-            <select id="filter">
-                <option value="all">All</option>
-                <option value="breakfast">Breakfast</option>
-                <option value="lunch">Lunch</option>
-                <option value="dinner">Dinner</option>
-                <option value="dessert">Dessert</option>
-            </select>
-        </section>
+    <div class="main">
+        <div class="main-highlight">
+            <div class="main-detail">
+                <div class="recipe-wrapper" id="wrapper">
+                    <div class="recipee-ingredients"></div>
+                    <div class="recipeeInstructions" id="recipeeInstructions"></div>           
+                </div>           
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="/scripts/recipe.js"></script>
 
-        <section id="recipe-list">
-            <!-- Recipe cards will be displayed here -->
-        </section>
-
-        
-    </main>
-
-    <footer>
-        <p>&copy; 2023 Food Recipes</p>
-    </footer>
-        <script type="module" src="/scripts/recipe.js"></script>
 </body>
 </html>
