@@ -46,7 +46,7 @@ To run the Recipe Finder Web App locally, follow these steps:
 - HTML
 - CSS
 - JavaScript
-- Yummly API
+- themeal API
 
 
 

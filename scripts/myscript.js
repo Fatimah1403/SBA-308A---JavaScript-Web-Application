@@ -85,12 +85,13 @@ async function fetchSelectedMealData(searchQuery) {
             const formattedInstructions = steps.join('<br>');
             recipeeInstructions.innerHTML = formattedInstructions;
 
-            let ingredientsList = '<ul>';
+            let ingredientsList = '<h3>The Ingredients Are:</h3><ul>';
             ingredients.forEach((ingredient) => {
                 ingredientsList += `<li>${ingredient}</li>`;
             });
             ingredientsList += '</ul>';
             recipeeIngredients.innerHTML = ingredientsList;
+            
         }
         
         

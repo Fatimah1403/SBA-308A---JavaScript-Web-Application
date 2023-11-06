@@ -214,20 +214,36 @@ h2 {
     text-align: center;
     color: #e60909;
 }
+
+/* .recipee-ingredients {
+    display: flex;
+} */
+.recipee-ingredients h3 {
+    background-color: var(--whiteColor);
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
 .recipee-ingredients ul {
-    list-style: none;
+    /* list-style: none; */
     padding: 0;
+    /* margin: 0;  */
+    list-style: circle;
     background-color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding-left: 20px;
+    /* justify-content: center; */
+    align-items: flex-start;
   }
   
   .recipee-ingredients li {
+   list-style-position: outside;
+    list-style-type: circle; 
     margin-bottom: 5px;
     width: 100%;
-    text-align: center;
+    color: var(--darkBlueColor);
+    text-align: left;
   }
   
   .recipeeInstructions {
