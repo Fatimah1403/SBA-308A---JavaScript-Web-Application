@@ -75,13 +75,24 @@ async function fetchSelectedMealData(searchQuery) {
             let meal = myMeal[i];
             let count = 1;
             let ingredients = [];
+            // craete a div for instruction
+            const instructionDiv = document.createElement("div");
+            instructionDiv.className = "instructionDiv";
+            // split the instruction into separate steps
+            const steps = meal.strInstructions.split('\r\n');
+            steps.forEach((step) => {
+                const instructionParagraph = document.createElement("p");
+                instructionParagraph.textContent = step;
+                instructionDiv.appendChild(instructionParagraph);
+            });
+            recipeeInstructions.appendChild(instructionDiv);
+
             for (let j = 1; j <= 24; j++) {
                 if (meal['strIngredient' + j]) {
                     ingredients.push(`${meal['strMeasure' + j]} ${meal['strIngredient' + j]}`);
                 }
             }
             console.log(ingredients);
-            const steps = meal.strInstructions.split('\r\n');
             const formattedInstructions = steps.join('<br>');
             recipeeInstructions.innerHTML = formattedInstructions;
 

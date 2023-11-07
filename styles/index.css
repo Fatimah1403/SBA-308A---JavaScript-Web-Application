@@ -214,10 +214,19 @@ h2 {
     text-align: center;
     color: #e60909;
 }
-
-/* .recipee-ingredients {
+/* .recipe-wrapper {
     display: flex;
+    flex-direction: column;
+}
+.recipee-ingredients,
+.recipeeInstructions {
+    flex: 1;
 } */
+
+.recipee-ingredients {
+    /* display: flex; */
+    background-color: var(--whiteColor);
+}  
 .recipee-ingredients h3 {
     background-color: var(--whiteColor);
     text-align: center;
@@ -227,7 +236,7 @@ h2 {
 .recipee-ingredients ul {
     /* list-style: none; */
     padding: 0;
-    /* margin: 0;  */
+    margin: 0; 
     list-style: circle;
     background-color: #fff;
     display: flex;
@@ -251,4 +260,7 @@ h2 {
     margin: 20px 0;
     background-color: #fff;
     width: 80%;
+    text-align: left;
+    padding: 10px;
+    color: var(--darkBlueColor);
   }
